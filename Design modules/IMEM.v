@@ -7,7 +7,7 @@ module IMEM
 	);
 
 //memory declaration
-	reg [INSTR_WIDTH-1:0] IMEM [0: 2**PC_WIDTH-1]; 
+reg [INSTR_WIDTH-1:0] IMEM [0: 2**PC_WIDTH-1]; 
 
 initial begin
     $readmemh("riscvtest.mem", IMEM);
