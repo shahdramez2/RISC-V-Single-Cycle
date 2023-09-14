@@ -120,7 +120,7 @@ module RISC_tb ();
 
 
 
-	task check_DMEM (input [1023:0] index, input [31:0] expected_value, input [4:0]codeLine);
+	task check_DMEM (input [9:0] index, input [31:0] expected_value, input [4:0]codeLine);
 		@(negedge clk);
 		if(DUT.DMEM_inst.dmem[index] !== expected_value) begin
 			errorCases ++;
