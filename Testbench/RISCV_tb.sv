@@ -105,7 +105,7 @@ module RISC_tb ();
 
 
 
-	task check_regfile (input [5:0] index, input [31:0] expected_value, input [4:0]codeLine);
+	task check_regfile (input [4:0] index, input [31:0] expected_value, input [4:0]codeLine);
 		@(negedge clk);
 		if(DUT.inst_CPU_wrapper.inst_Datapath.reg_file_inst.reg_file[index] !== expected_value) begin
 			errorCases ++;
