@@ -1,13 +1,13 @@
 module IMEM 
 #(parameter INSTR_WIDTH = 32,
-			PC_WIDTH = 32)
+	    PC_WIDTH = 32)
 (
 	input      [PC_WIDTH-3:0]    PC,
 	output reg [INSTR_WIDTH-1:0] instruction
 	);
 
 //memory declaration
-reg [INSTR_WIDTH-1:0] IMEM [0:1023]; 
+	reg [INSTR_WIDTH-1:0] IMEM [0: 2**PC_WIDTH-1]; 
 
 initial begin
     $readmemh("riscvtest.mem", IMEM);
