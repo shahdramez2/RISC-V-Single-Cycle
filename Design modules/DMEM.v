@@ -12,7 +12,7 @@ module DMEM #( parameter WIDTH = 32, ADDRESS = 10 )
   localparam READ = 0;
   localparam WRITE = 1;
 
-  reg [WIDTH - 1 : 0] dmem [0: 1023];
+  reg [WIDTH - 1 : 0] dmem [0: 2**ADDRESS-1];
 
   integer i;
   
